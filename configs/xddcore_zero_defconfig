@@ -8,4 +8,6 @@ CONFIG_DRAM_CLK=156
 CONFIG_DRAM_ZQ=0
 CONFIG_SUNXI_MINIMUM_DRAM_MB=64
 CONFIG_USE_BOOTARGS=y
+CONFIG_BOOTARGS="console=ttyS0,115200 panic=5 rootwait root=/dev/mmcblk0p2 earlyprintk rw"
+CONFIG_BOOTCOMMAND="load mmc 0:1 0x80008000 zImage;load mmc 0:1 0x80c08000 suniv-f1c200s-xddcore-zero.dtb;bootz 0x80008000 - 0x80c08000;"
 CONFIG_CONS_INDEX=1
